@@ -55,7 +55,7 @@ var happytest = $.ajax({
 	})
 	.done(function(happytest){
 		console.log(happytest);
-		// Velow checks for images that have location coordiantes
+		// Below checks for images that have location coordiantes
 		$.each(happytest.data, function(i, item){
 			console.log(i);
 			
