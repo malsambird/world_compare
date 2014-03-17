@@ -29,7 +29,7 @@ var happytest = $.ajax({
 
 //"https://api.instagram.com/v1/tags/100happydays/media/recent?access_token=ACCESS-TOKEN",
 var client_id = "b8450f13c6f04d21b2d85661cc8a1923";
-
+//new google api key AIzaSyDQFaTMrBAaVCQcWr6e1suw9kSYw44cq40
 //google API AIzaSyDPb7OwBHpTcv5N_rci1FcQZZiOPvrIZjQ
 
 
