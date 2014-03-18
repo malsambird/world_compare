@@ -1,17 +1,42 @@
-/*body * {
+body * {
 	border: 1px solid black;
-}*/
+	font-family: Tahoma;
+}
 
 /*#mapcontainer {
 	width: 800px;
 	height: 591px;
 	position: relative;
 }*/
+header {
+	height: 130px;
+	background-color: gray;
+	position: relative;
+}
+h1 {
+	font-family: Tahoma;
+	text-align: center;
+}
+button {
+	margin: auto;
+	padding: 5px 10px;
+	font-size: 1.5em;
+	position: relative;
+}
+#bodycontainer {
+	position:relative;
+	width: 100%;
+}
+#appcontainer {
+	position: relative;
+	margin: auto;
+}
 #mapcontainer {
-	width: 800px;
-	height: 800px;
+	width: 550px;
+	height: 550px;
 	position: relative;
 	display: inline-block;
+	vertical-align: text-top;
 }
 #map {
 	position: relative;
@@ -25,29 +50,34 @@
 	top: 333px; /* height/2 + marker height  + 24?*/
 	z-index: 1;
 	display: none;
+	-webkit-filter: invert(100%);
 }
 
 #marker:hover {
-	-webkit-filter: invert(100%);
+	-webkit-filter: drop-shadow(1px 1px 1px white);
+
 	z-index: 2;
 }
 
 #closerlook {
 	position: relative;
-	float:right;
+	vertical-align: text-top;
 	display: inline-block;
 	background-color: gray;
-	height: 800px;
-	width: 350px;
+	height: 550px;
+	width: 400px;
 
 }
 #current_pic {
 	height: 306px;
 	width: 306px;
-	background-color: orange;
+	border: 3px solid black;
 	margin: auto;
-	margin-top: 100px;
-
+	background: radial-gradient(white, #EDF52A);
 	
-
 }
+ 
+ .star {
+ 	/*border: 2px solid black;*/
+ 	border-radius: 100%;
+ }
