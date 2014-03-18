@@ -1,6 +1,9 @@
 body * {
-	border: 1px solid black;
 	font-family: Tahoma;
+	color: #9f7435;
+}
+body {
+	background-color: #23546a;
 }
 
 /*#mapcontainer {
@@ -9,27 +12,36 @@ body * {
 	position: relative;
 }*/
 header {
-	height: 130px;
-	background-color: gray;
+	height: 80px;
+	background-color: #FAFF91;
 	position: relative;
+	min-width: 900px;
+	
+	margin-bottom: 10px;
+	border: 2px solid #9f7435;
+	border-radius: 5px;
 }
 h1 {
 	font-family: Tahoma;
 	text-align: center;
+	padding: 15px;
 }
 button {
-	margin: auto;
+	margin: 0 auto;
 	padding: 5px 10px;
 	font-size: 1.5em;
-	position: relative;
+	display: none;
 }
 #bodycontainer {
 	position:relative;
 	width: 100%;
 }
 #appcontainer {
-	position: relative;
-	margin: auto;
+	width: 885px;
+	margin: 1px auto;
+	background-color: #9f7435;
+	border: 5px solid #9f7435;
+	border-radius: 5px;
 }
 #mapcontainer {
 	width: 550px;
@@ -42,12 +54,12 @@ button {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	border-radius: 5px;
 
 }
 #marker {
 	position: absolute;
-	left: 388px; /* width/2 - marker width/2 */
-	top: 333px; /* height/2 + marker height  + 24?*/
+
 	z-index: 1;
 	display: none;
 	-webkit-filter: invert(100%);
@@ -63,20 +75,40 @@ button {
 	position: relative;
 	vertical-align: text-top;
 	display: inline-block;
-	background-color: gray;
+	background-color: #FAFF91;
 	height: 550px;
-	width: 400px;
+	width: 330px;
+	border-radius: 5px;
 
+}
+h3 {
+	text-align: center;
 }
 #current_pic {
 	height: 306px;
 	width: 306px;
-	border: 3px solid black;
+	border-radius: 5px;
 	margin: auto;
-	background: radial-gradient(white, #EDF52A);
+	background: radial-gradient(white, black);
 	
 }
- 
+#caption {
+	padding: 20px;
+	font-size: 0.7em;
+	
+	text-align: center;
+}
+
+#caption p {
+	color: #FAFF91;
+
+}
+#caption p:hover {
+	color: #9f7435;
+}
+ h5 {
+ 	font-weight: normal;
+ }
  .star {
  	/*border: 2px solid black;*/
  	border-radius: 100%;
