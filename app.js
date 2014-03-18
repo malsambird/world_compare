@@ -98,8 +98,32 @@ $("div#mapcontainer").on('click', 'img.star', function(event){
 	$("#caption p").text(newCaption);
 	});
 
-$("button").click(function(){
-	happytest.done;
+$("#on").click(function(event){
+	event.preventDefault();
+	$(this)
+	.css('background-color', '#9f7435')
+	.css('color', '#FAFF91');
+	$("#off")
+	.css('background-color', '#FAFF91')
+	.css('color', '#9f7435');
+	$("#caption p")
+	.css('color', '#9f7435');
 });
-	
+
+$("#off").click(function(event){
+	event.preventDefault();
+	$(this)
+	.css('background-color', '#9f7435')
+	.css('color', '#FAFF91');
+	$("#on")
+	.css('background-color', '#FAFF91')
+	.css('color', '#9f7435');
+	$("#caption p")
+	.css('color', '#FAFF91');
+});
+
+
+
+
+
 });

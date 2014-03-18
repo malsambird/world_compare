@@ -89,13 +89,12 @@ h3 {
 	width: 306px;
 	border-radius: 5px;
 	margin: auto;
-	background: radial-gradient(white, black);
+	background: radial-gradient(white, #FAFF91);
 	
 }
 #caption {
-	padding: 20px;
+	padding: 23px;
 	font-size: 0.7em;
-	
 	text-align: center;
 }
 
@@ -103,12 +102,26 @@ h3 {
 	color: #FAFF91;
 
 }
-#caption p:hover {
+#on {
+	
+	background-color: #FAFF91;
 	color: #9f7435;
 }
- h5 {
- 	font-weight: normal;
- }
+#off {
+	
+	background-color: #9f7435;
+	color: #FAFF91;
+
+}
+.tinybutton {
+	display: inline;
+	padding: 4px;
+	border-radius: 2px;
+}
+.tinybutton:hover {
+	cursor: pointer;
+}
+
  .star {
  	/*border: 2px solid black;*/
  	border-radius: 100%;
