@@ -17,6 +17,7 @@ function Star(longitude, latitude, url) {
 //Declare Variables
 var latitude = 0; // (φ)
 var longitude = 0;   // (λ)
+var newPicURL;
 var x;
 var y;
 var div = $('.container');
@@ -40,7 +41,14 @@ var createNewStar = function (){
 	console.log("y =" +y);
 	
 	//Clone Star image and place it in the correct location
-	var newStar = $("#marker").clone().css('top', y -32+ 'px').css('left', x  + 'px').css('position', 'absolute').show();
+	var newStar = $("#marker")
+	.clone()
+	.css('top', y -32+ 'px')
+	.css('left', x  + 'px')
+	.css('position', 'absolute')
+	.attr('data', newPicURL)
+	.show();
+	console.log(newPicURL);
 	console.log("new star created");
 	return newStar;
 };
@@ -67,21 +75,27 @@ var happytest = $.ajax({
 				i = new Star(+item.location.longitude, +item.location.latitude, item.images.low_resolution.url);
 				latitude = +item.location.latitude;
 				longitude = +item.location.longitude;
-				
+				newPicURL = item.images.low_resolution.url;
 				$("#mapcontainer").prepend(createNewStar);
 			
 				//shows the corresponding pictures. I eventually want to display the picture when the star is clicked. 
 				var showPic = function(){
-				var Picture = item.images.low_resolution.url;
-				div.append("<img src =" + Picture +">");
-				
-			};
-			showPic(item);
+					var Picture = item.images.low_resolution.url;
+					div.append("<img src =" + Picture +">");
+					};
+				showPic(item);
 			}
 		});
-
-		
+	});
+//display 
+$("div#mapcontainer").on('click', 'img.star', function(event){
+	event.preventDefault();
+	console.log("click");
+	console.log($(this));
+	var newPic = $(this).data();
+	console.log(newPic);
+	$("#current_pic").css('background-color', 'white');
 	});
 
-
+	
 });

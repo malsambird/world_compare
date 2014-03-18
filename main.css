@@ -10,6 +10,8 @@
 #mapcontainer {
 	width: 800px;
 	height: 800px;
+	position: relative;
+	display: inline-block;
 }
 #map {
 	position: relative;
@@ -27,4 +29,25 @@
 
 #marker:hover {
 	-webkit-filter: invert(100%);
+	z-index: 2;
+}
+
+#closerlook {
+	position: relative;
+	float:right;
+	display: inline-block;
+	background-color: gray;
+	height: 800px;
+	width: 350px;
+
+}
+#current_pic {
+	height: 306px;
+	width: 306px;
+	background-color: orange;
+	margin: auto;
+	margin-top: 100px;
+
+	
+
 }
