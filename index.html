@@ -4,29 +4,39 @@
 	<meta charset="UTF-8">
 	<title>Happy Finder</title>
 	<link rel="stylesheet" href="main.css">
+	<link href='http://fonts.googleapis.com/css?family=Averia+Sans+Libre:400,700' rel='stylesheet' type='text/css'>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="app.js"></script>
-	<!--<script type="text/javascript"
-      src=
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyARbPin6u7cRfs1dyqXZemAWs3f-btI3m0&sensor=false">
-    </script>-->
-   
+
 </head>
 <body>
-	<header>
-		<h1> What is making people happy right now? </h1>
+	<div id="explanationback"></div>
+	<div id="explanation">
+		<div id="exit" class="icon"> X </div>
+		<h1> More Info </h1> <p class="q"> What is this? </p>
+		<p> This app shows what makes people happy all over the world! Every time you update, you get real-time results!</p>
+		<p class="q"> How does it work? </p>
+		<p>We search Instagram for the most recent photos with the tag "100happydays" and display the locations as stars on the map. Click the star to see the photo.</p>
+		<p class="q"> What is 100 Happy Days? </p>
+		<p> 100 Happy Days is an initiative that challenges people to take a photo a day of something that makes them happy. Find out more at <a src="100happydays.com" target="_blank"> 100happydays.com</a>.</p>
+	</div>
+	<div id="info" class="icon"> ? </div>
+
+	<div id="title">
+		<h1> What's making people happy right now? </h1>
 		
-		<button> Update </button>
+		
 	
-	</header>
+	</div>
 	<div id="bodycontainer">
 		<div id="appcontainer">
 			<div id="mapcontainer"> 
-				<img id="marker" class="star" src="star.png">
+				<img id="marker" src="star.png">
 				<img id="map" src="mapex.jpg"> 
+				<button id="update"> Update Happy Map </button>
 			</div>
 			<div id="closerlook">
-				<h3> Click on the stars! </h3>
+				<h3> Click on a star! </h3>
 				
 				<div id="current_pic"></div>
 

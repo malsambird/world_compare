@@ -49,6 +49,7 @@ var createNewStar = function (){
 	.css('position', 'absolute')
 	.attr('data', newPicURL)
 	.attr('data-caption', caption + " ")
+	.addClass("star")
 	.show();
 	console.log(newPicURL);
 	console.log("new star created");
@@ -57,6 +58,7 @@ var createNewStar = function (){
 
 
 //AJAX call to instagram API
+var runAJAX = function(){
 var happytest = $.ajax({
 	url: "https://api.instagram.com/v1/tags/100happydays/media/recent?client_id=b8450f13c6f04d21b2d85661cc8a1923",
 	data: {"filter": 'Willow'},
@@ -82,10 +84,13 @@ var happytest = $.ajax({
 					caption = item.caption.text;
 					}
 				$("#mapcontainer").prepend(createNewStar);
+				//createNewStar.prependTo($("#mapcontainer")).fadeIn('slow');
 	
 			}
 		});
 	});
+};
+runAJAX();
 //display 
 $("div#mapcontainer").on('click', 'img.star', function(event){
 	event.preventDefault();
@@ -123,7 +128,23 @@ $("#off").click(function(event){
 });
 
 
+$("#info").click(function(event){
+	event.preventDefault();
+	$("#explanationback").fadeIn('slow');
+	$("#explanation").fadeIn('slow');
+	console.log("info clicked");
+});
+$("#exit").click(function(event){
+	event.preventDefault();
+	$("#explanationback").fadeOut('slow');
+	$("#explanation").fadeOut('slow');
+	console.log("info clicked");
+});
 
-
+$("#update").click(function(event){
+	event.preventDefault();
+	$(".star").remove();
+	runAJAX();
+});
 
 });
