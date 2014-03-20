@@ -5,8 +5,6 @@ var latitude = 0; // (φ)
 var longitude = 0;   // (λ)
 var newPicURL;
 var caption;
-var x;
-var y;
 var mapWidth    = 550;
 var mapHeight   = 550;
 
@@ -79,7 +77,7 @@ var runAJAX = function(){
 				if (item.caption.text !== null){
 					caption = item.caption.text;
 				} else {
-					caption = "No caption";
+					caption = "No caption.";
 				}
 				// add New star to map through calling CreateNewStar function
 				$("#mapcontainer").prepend(createNewStar);
