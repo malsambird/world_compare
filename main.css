@@ -66,16 +66,17 @@ body {
 	color:#23546a;
 }
 #title {
-	height: 80px;
+	height: 300px;
 	width: 750px;
 	margin: auto;
-
+	position: relative;
 	background-color: #FAFF91;
 	background: linear-gradient(#FDFFDB, #FAFF91);
-	position: relative;
+	
 	border: 2px solid #9f7435;
 	border-radius: 10px;
 	margin-top: 2%;
+	
 }
 h1 {
 	text-align: center;
